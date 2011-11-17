@@ -1,10 +1,12 @@
 h1. After install
 
 h2. Activate command-t
+
 cd ~/.vim/bundle/Command-T/ruby/command-t/
 rvm use system
 ruby extconf.rb
 make
 
 h2. Generate helptags
+
 :call pathogen#helptags()

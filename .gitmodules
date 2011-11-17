@@ -43,3 +43,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/suntastic"]
+	path = bundle/suntastic
+	url = https://github.com/scrooloose/syntastic.git

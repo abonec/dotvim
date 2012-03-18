@@ -1,6 +1,8 @@
 call pathogen#infect()
 syntax on
 filetype plugin indent on
+syntax enable
+set pastetoggle=<F2>
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -21,3 +23,28 @@ set number      "add line numbers
 let g:pathogen_disabled = []
 
 " call add(g:pathogen_disabled, 'vim-commentary')
+
+" tab settings
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+
+"disable visual bell
+set visualbell t_vb=
+
+"statusline setup
+set statusline=%f       "tail of the filename
+
+"Git
+set statusline+=%{fugitive#statusline()}
+
+"RVM
+set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
+
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
+set laststatus=2

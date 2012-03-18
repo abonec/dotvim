@@ -55,3 +55,9 @@
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/rubycomplete"]
+	path = bundle/rubycomplete
+	url = https://github.com/vim-scripts/rubycomplete.vim.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/vim-scripts/SuperTab-continued..git

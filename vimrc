@@ -2,12 +2,23 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 syntax enable
+
 set pastetoggle=<F2>
 " copy and paste bind
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
+
+" Minibuffexpl
+map <Leader>b :MiniBufExplorer<cr>
+let g:miniBufExplMapWindowNavVim = 1
+
+nnoremap <M-i> :bn<CR>
+nnoremap <M-h> :bp<CR>
+
+
+
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible

@@ -5,3 +5,5 @@ set guioptions-=T
 set guioptions-=m
 set background=dark
 colorscheme solarized
+" Non-gui tabs in gvim
+set go-=e

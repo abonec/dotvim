@@ -11,11 +11,11 @@ nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
 
 " Minibuffexpl
-map <Leader>b :MiniBufExplorer<cr>
-let g:miniBufExplMapWindowNavVim = 1
+" map <Leader>b :MiniBufExplorer<cr>
+" let g:miniBufExplMapWindowNavVim = 1
 
-nnoremap <M-i> :bn<CR>
-nnoremap <M-h> :bp<CR>
+nnoremap <M-i> :tabn<CR>
+nnoremap <M-h> :tabp<CR>
 
 
 

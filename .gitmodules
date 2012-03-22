@@ -46,9 +46,6 @@
 [submodule "bundle/vim-preview"]
 	path = bundle/vim-preview
 	url = https://github.com/greyblake/vim-preview.git
-[submodule "bundle/minibuffexpl"]
-	path = bundle/minibuffexpl
-	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git

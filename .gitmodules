@@ -76,3 +76,9 @@
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = https://github.com/mirell/vim-matchit.git
+[submodule "bundle/vim-rename"]
+	path = bundle/vim-rename
+	url = https://github.com/wojtekmach/vim-rename
+[submodule "bundle/vim-yaml-helper"]
+	path = bundle/vim-yaml-helper
+	url = https://github.com/lmeijvogel/vim-yaml-helper.git

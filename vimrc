@@ -7,8 +7,8 @@ set pastetoggle=<F2>
 " copy and paste bind
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
-nnoremap <C-p> "+gP
-vnoremap <C-p> "+gP
+nnoremap <C-p> "+gp
+vnoremap <C-p> "+gp
 
 " Minibuffexpl
 " map <Leader>b :MiniBufExplorer<cr>
@@ -16,6 +16,32 @@ vnoremap <C-p> "+gP
 
 nnoremap <M-i> :tabn<CR>
 nnoremap <M-h> :tabp<CR>
+" Tab Control (others)
+map <A-1> 1gt
+map <A-2> 2gt
+map <A-3> 3gt
+map <A-4> 4gt
+map <A-5> 5gt
+map <A-6> 6gt
+map <A-7> 7gt
+map <A-8> 8gt
+map <A-9> 9gt
+map <A-0> 10gt
+imap <A-1> <ESC>1gt
+imap <A-2> <ESC>2gt
+imap <A-3> <ESC>3gt
+imap <A-4> <ESC>4gt
+imap <A-5> <ESC>5gt
+imap <A-6> <ESC>6gt
+imap <A-7> <ESC>7gt
+imap <A-8> <ESC>8gt
+imap <A-9> <ESC>9gt
+imap <A-0> <ESC>10gt
+
+map <C-t> <ESC>:tabnew<CR>
+      
+nnoremap <Leader>d :NERDTree<CR>
+
 
 
 
@@ -34,6 +60,9 @@ set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
 set number      "add line numbers
+
+" When you type the first tab hit will complete as much as possible, the second tab hit will provide a list, the third and subsequent tabs will cycle through completion options so you can complete the file without further keys
+set wildmode=longest,list,full
 
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []

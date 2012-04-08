@@ -38,6 +38,9 @@ imap <A-8> <ESC>8gt
 imap <A-9> <ESC>9gt
 imap <A-0> <ESC>10gt
 
+" Open file in a tab before the current one
+com! -nargs=1 -complete=file TabEdit :exe ( tabpagenr() - 1 ) . "tabedit " . <q-args>
+command Gdt tabedit %|Gdiff
 " map <C-t> <ESC>:tabnew<CR>
       
 nnoremap <Leader>d :NERDTree<CR>
@@ -108,3 +111,8 @@ highlight Pmenu ctermbg=238 gui=bold
 
 " abbreviations
 cab help tab help
+
+
+" tags
+map <A-b> :tp<CR>
+map <A-n> :tn<CR>

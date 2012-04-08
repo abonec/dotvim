@@ -38,7 +38,7 @@ imap <A-8> <ESC>8gt
 imap <A-9> <ESC>9gt
 imap <A-0> <ESC>10gt
 
-map <C-t> <ESC>:tabnew<CR>
+" map <C-t> <ESC>:tabnew<CR>
       
 nnoremap <Leader>d :NERDTree<CR>
 

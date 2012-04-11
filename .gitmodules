@@ -85,3 +85,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/toggle_words"]
+	path = bundle/toggle_words
+	url = https://github.com/vim-scripts/toggle_words.vim

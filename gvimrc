@@ -7,3 +7,4 @@ set background=dark
 colorscheme solarized
 " Non-gui tabs in gvim
 set go-=e
+

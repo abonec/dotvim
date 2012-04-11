@@ -44,7 +44,7 @@ command Gdt tabedit %|Gdiff
 " map <C-t> <ESC>:tabnew<CR>
       
 nnoremap <Leader>d :NERDTree<CR>
-
+nmap ,t :ToggleWord<CR>
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible

@@ -88,3 +88,15 @@
 [submodule "bundle/toggle_words"]
 	path = bundle/toggle_words
 	url = https://github.com/vim-scripts/toggle_words.vim
+[submodule "bundle/vim-ruby-debugger"]
+	path = bundle/vim-ruby-debugger
+	url = https://github.com/astashov/vim-ruby-debugger.git
+[submodule "bundle/vim-ruby-conque"]
+	path = bundle/vim-ruby-conque
+	url = https://github.com/skwp/vim-ruby-conque.git
+[submodule "bundle/vim-rspec"]
+	path = bundle/vim-rspec
+	url = https://github.com/skwp/vim-rspec.git
+[submodule "bundle/vim-conque"]
+	path = bundle/vim-conque
+	url = https://github.com/rson/vim-conque.git

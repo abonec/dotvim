@@ -1,74 +1,8 @@
 call pathogen#infect()
+call pathogen#helptags()
 syntax on
 filetype plugin indent on
 syntax enable
-
-set pastetoggle=<F2>
-" copy and paste bind
-nnoremap <C-y> "+y
-vnoremap <C-y> "+y
-nnoremap <C-p> "+gp
-vnoremap <C-p> "+gp
-
-" Minibuffexpl
-" map <Leader>b :MiniBufExplorer<cr>
-" let g:miniBufExplMapWindowNavVim = 1
-
-nnoremap <M-i> :tabn<CR>
-nnoremap <M-h> :tabp<CR>
-" Tab Control (others)
-map <A-1> 1gt
-map <A-2> 2gt
-map <A-3> 3gt
-map <A-4> 4gt
-map <A-5> 5gt
-map <A-6> 6gt
-map <A-7> 7gt
-map <A-8> 8gt
-map <A-9> 9gt
-map <A-0> 10gt
-imap <A-1> <ESC>1gt
-imap <A-2> <ESC>2gt
-imap <A-3> <ESC>3gt
-imap <A-4> <ESC>4gt
-imap <A-5> <ESC>5gt
-imap <A-6> <ESC>6gt
-imap <A-7> <ESC>7gt
-imap <A-8> <ESC>8gt
-imap <A-9> <ESC>9gt
-imap <A-0> <ESC>10gt
-
-" Create empty split related to the current one
-nmap <Leader><left>  :leftabove  vnew<CR>
-nmap <Leader><right> :rightbelow vnew<CR>
-nmap <Leader><up>    :leftabove  new<CR>
-nmap <Leader><down>  :rightbelow new<CR>
-
-" Open file in a tab before the current one
-com! -nargs=1 -complete=file TabEdit :exe ( tabpagenr() - 1 ) . "tabedit " . <q-args>
-command Gdt tabedit %|Gdiff
-" map <C-t> <ESC>:tabnew<CR>
-      
-" nnoremap <Leader>d :NERDTree<CR>
-nmap <silent> <Leader>p :NERDTreeToggle<CR>
-nnoremap <Leader>B :CommandTBuffer<CR>
-nnoremap <Leader>r :RunSpec<CR>
-nmap ,t :ToggleWord<CR>
-
-" Vim Ruby Debugger settings
-" let g:ruby_debugger_debug_mode = 1
-let g:ruby_debugger_spec_path = 'rspec'
-let g:ruby_debugger_default_script = 'script/rails s'
-" let g:ruby_debugger_progname = 'mvim'
-
-map <A-b>  :call g:RubyDebugger.toggle_breakpoint()<CR>
-map <A-v>  :call g:RubyDebugger.open_variables()<CR>
-map <A-m>  :call g:RubyDebugger.open_breakpoints()<CR>
-map <F7>   :call g:RubyDebugger.step()<CR>
-map <F5>   :call g:RubyDebugger.next()<CR>
-map <F8>   :call g:RubyDebugger.continue()<CR>
-map <A-e>  :call g:RubyDebugger.exit()<CR>
-map <A-d>  :call g:RubyDebugger.remove_breakpoints()<CR>
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
@@ -120,6 +54,81 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 " set statusline=%{ruby_debugger#statusline()}
 
+set pastetoggle=<F2>
+" copy and paste bind
+nnoremap <C-y> "+y
+vnoremap <C-y> "+y
+nnoremap <C-p> "+gp
+vnoremap <C-p> "+gp
+
+" Minibuffexpl
+" map <Leader>b :MiniBufExplorer<cr>
+" let g:miniBufExplMapWindowNavVim = 1
+
+nnoremap <M-i> :tabn<CR>
+nnoremap <M-h> :tabp<CR>
+" Tab Control (others)
+map <A-1> 1gt
+map <A-2> 2gt
+map <A-3> 3gt
+map <A-4> 4gt
+map <A-5> 5gt
+map <A-6> 6gt
+map <A-7> 7gt
+map <A-8> 8gt
+map <A-9> 9gt
+map <A-0> 10gt
+imap <A-1> <ESC>1gt
+imap <A-2> <ESC>2gt
+imap <A-3> <ESC>3gt
+imap <A-4> <ESC>4gt
+imap <A-5> <ESC>5gt
+imap <A-6> <ESC>6gt
+imap <A-7> <ESC>7gt
+imap <A-8> <ESC>8gt
+imap <A-9> <ESC>9gt
+imap <A-0> <ESC>10gt
+
+" Create empty split related to the current one
+nmap <Leader><left>  :leftabove  vnew<CR>
+nmap <Leader><right> :rightbelow vnew<CR>
+nmap <Leader><up>    :leftabove  new<CR>
+nmap <Leader><down>  :rightbelow new<CR>
+
+" nnoremap <Leader>d :NERDTree<CR>
+nmap <silent> <Leader>p :NERDTreeToggle<CR>
+nnoremap <Leader>b :CommandTBuffer<CR>
+nnoremap <Leader>r :call RunRspecCurrentFileConque()<CR>
+nnoremap <Leader>l :call RunRspecCurrentLineConque()<CR>
+
+nnoremap <silent> <Leader>] :tabe ~/.vim/vimrc<CR>
+nnoremap <Leader>[ :lcd %:p:h<CR>
+
+" tags
+map <A-b> :tp<CR>
+map <A-n> :tn<CR>
+
+" map <C-t> <ESC>:tabnew<CR>
+      
+nmap ,t :ToggleWord<CR>
+
+" Vim Ruby Debugger settings
+" let g:ruby_debugger_debug_mode = 1
+let g:ruby_debugger_spec_path = 'rspec'
+let g:ruby_debugger_default_script = 'script/rails s'
+let g:ruby_debugger_no_maps = 1
+" let g:ruby_debugger_progname = 'mvim'
+
+map <A-b>  :call g:RubyDebugger.toggle_breakpoint()<CR>
+map <A-v>  :call g:RubyDebugger.open_variables()<CR>
+map <A-m>  :call g:RubyDebugger.open_breakpoints()<CR>
+map <F7>   :call g:RubyDebugger.step()<CR>
+map <F5>   :call g:RubyDebugger.next()<CR>
+map <F8>   :call g:RubyDebugger.continue()<CR>
+map <A-e>  :call g:RubyDebugger.exit()<CR>
+map <A-d>  :call g:RubyDebugger.remove_breakpoints()<CR>
+
+
 
 
 
@@ -135,7 +144,8 @@ highlight Pmenu ctermbg=238 gui=bold
 " abbreviations
 cab help tab help
 
+" Open file in a tab before the current one
+com! -nargs=1 -complete=file Te :exe ( tabpagenr() - 1 ) . "tabedit " . <q-args>
+command Gdt tabedit %|Gdiff
 
-" tags
-map <A-b> :tp<CR>
-map <A-n> :tn<CR>
+

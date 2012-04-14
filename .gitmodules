@@ -100,3 +100,12 @@
 [submodule "bundle/vim-conque"]
 	path = bundle/vim-conque
 	url = https://github.com/rson/vim-conque.git
+[submodule "bundle/eval_selection"]
+	path = bundle/eval_selection
+	url = https://github.com/vim-scripts/EvalSelection.vim.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = https://github.com/sjl/gundo.vim.git

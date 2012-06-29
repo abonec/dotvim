@@ -1,3 +1,8 @@
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost vimrc source $MYVIMRC
+endif
+
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
@@ -101,6 +106,14 @@ nnoremap <Leader>b :CommandTBuffer<CR>
 nnoremap <Leader>r :call RunRspecCurrentFileConque()<CR>
 nnoremap <Leader>l :call RunRspecCurrentLineConque()<CR>
 
+
+let Tlist_Show_One_File = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+nnoremap <silent> <F9> :TlistToggle<CR>
+
+
+nnoremap <silent> <F12> :CoffeeMake<CR>
+
 nnoremap <silent> <Leader>] :tabe ~/.vim/vimrc<CR>
 nnoremap <Leader>[ :lcd %:p:h<CR>
 
@@ -146,6 +159,16 @@ cab help tab help
 
 " Open file in a tab before the current one
 com! -nargs=1 -complete=file Te :exe ( tabpagenr() - 1 ) . "tabedit " . <q-args>
-command Gdt tabedit %|Gdiff
+command! Gdt tabedit %|Gdiff
+"Surround selected text by spaces
+vnoremap <CR> <ESC>`<i<SPACE><ESC>`>la<SPACE><ESC>h
+" back to parent in git buffer explorer
+" autocmd User fugitive
+"   \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+"   \   nnoremap <buffer> .. :edit %:h<CR> |
+"   \ endif
 
 
+
+" auto delete buffers with git objects
+" autocmd BufReadPost fugitive://* set bufhidden=delete

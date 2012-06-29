@@ -4,6 +4,9 @@
 [submodule "bundle/vim-vividchalk"]
 	path = bundle/vim-vividchalk
 	url = git://github.com/tpope/vim-vividchalk.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
 	url = git://github.com/wincent/Command-T.git
@@ -109,3 +112,9 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
+[submodule "bundle/vim-open"]
+	path = bundle/vim-open
+	url = https://github.com/austintaylor/vim-open.git
+[submodule "bundle/swap-parameters"]
+	path = bundle/swap-parameters
+	url = https://github.com/vim-scripts/swap-parameters.git

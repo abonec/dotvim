@@ -142,7 +142,7 @@ map <A-e>  :call g:RubyDebugger.exit()<CR>
 map <A-d>  :call g:RubyDebugger.remove_breakpoints()<CR>
 
 
-
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 
 

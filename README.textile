@@ -12,4 +12,5 @@ h2. Generate helptags
 :call pathogen#helptags()
 
 h2. On ubuntu
+
 sudo apt-get install ack-grep

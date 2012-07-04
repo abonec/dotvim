@@ -13,4 +13,9 @@ h2. Generate helptags
 
 h2. On ubuntu
 
+Configure before make:
+./configure --with-features=huge  --disable-largefile \
+            --enable-perlinterp   --enable-pythoninterp \
+            --enable-rubyinterp   --enable-gui=gtk2 \
+
 sudo apt-get install ack-grep

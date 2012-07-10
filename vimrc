@@ -103,9 +103,12 @@ nmap <Leader><down>  :rightbelow new<CR>
 " nnoremap <Leader>d :NERDTree<CR>
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <Leader>b :CommandTBuffer<CR>
-nnoremap <Leader>r :call RunRspecCurrentFileConque()<CR>
-nnoremap <Leader>l :call RunRspecCurrentLineConque()<CR>
+" nnoremap <Leader>r :call RunRspecCurrentFileConque()<CR>
+" nnoremap <Leader>l :call RunRspecCurrentLineConque()<CR>
 
+" CtrlP settings:
+nnoremap <silent> <Leader>t :CtrlP<CR>
+nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
 
 let Tlist_Show_One_File = 1
 let Tlist_GainFocus_On_ToggleOpen = 1

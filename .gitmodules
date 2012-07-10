@@ -121,3 +121,15 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/easymotion"]
+	path = bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/NrrRgn"]
+	path = bundle/NrrRgn
+	url = https://github.com/chrisbra/NrrwRgn.git
+[submodule "bundle/ZoomWin"]
+	path = bundle/ZoomWin
+	url = https://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/vim-vroom"]
+	path = bundle/vim-vroom
+	url = https://github.com/skalnik/vim-vroom.git

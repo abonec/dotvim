@@ -157,9 +157,8 @@ highlight Pmenu ctermbg=238 gui=bold
 " abbreviations
 cab help tab help
 
-" Open file in a tab before the current one
-com! -nargs=1 -complete=file Te :exe ( tabpagenr() - 1 ) . "tabedit " . <q-args>
 command! Gdt tabedit %|Gdiff
+
 "Surround selected text by spaces
 vnoremap <CR> <ESC>`<i<SPACE><ESC>`>la<SPACE><ESC>h
 " back to parent in git buffer explorer
@@ -169,6 +168,11 @@ vnoremap <CR> <ESC>`<i<SPACE><ESC>`>la<SPACE><ESC>h
 "   \ endif
 
 
-
 " auto delete buffers with git objects
 " autocmd BufReadPost fugitive://* set bufhidden=delete
+"
+" Highlight word under cursor
+" autocmd CursorMoved * exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
+" map russian's keymap
+set cursorline
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz

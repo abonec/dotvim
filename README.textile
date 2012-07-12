@@ -11,4 +11,4 @@ Configure before make:
             --enable-perlinterp   --enable-pythoninterp \
             --enable-rubyinterp   --enable-gui=gtk2 \
 
-sudo apt-get install ack-grep
+sudo apt-get install ack-grep ctags

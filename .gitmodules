@@ -112,9 +112,6 @@
 [submodule "bundle/vim-open"]
 	path = bundle/vim-open
 	url = https://github.com/austintaylor/vim-open.git
-[submodule "bundle/swap-parameters"]
-	path = bundle/swap-parameters
-	url = https://github.com/vim-scripts/swap-parameters.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git

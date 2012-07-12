@@ -109,6 +109,7 @@ nnoremap <Leader>b :CommandTBuffer<CR>
 " CtrlP settings:
 nnoremap <silent> <Leader>t :CtrlP<CR>
 nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
+let g:ctrlp_map = ''
 
 let Tlist_Show_One_File = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
@@ -177,5 +178,4 @@ vnoremap <CR> <ESC>`<i<SPACE><ESC>`>la<SPACE><ESC>h
 " Highlight word under cursor
 " autocmd CursorMoved * exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
 " map russian's keymap
-set cursorline
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz

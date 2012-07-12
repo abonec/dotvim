@@ -1,8 +1,8 @@
 h1. After install
 
-h2. Generate helptags
+h2. Update submodules
 
-:call pathogen#helptags()
+git submodule update --init
 
 h2. On ubuntu
 

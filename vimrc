@@ -66,6 +66,7 @@ vnoremap <C-y> "+y
 nnoremap <C-p> "+gp
 vnoremap <C-p> "+gp
 
+nnoremap gp `[v`]
 " Minibuffexpl
 " map <Leader>b :MiniBufExplorer<cr>
 " let g:miniBufExplMapWindowNavVim = 1
@@ -110,6 +111,10 @@ nnoremap <Leader>b :CommandTBuffer<CR>
 nnoremap <silent> <Leader>t :CtrlP<CR>
 nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = ''
+
+" Gundo settings:
+nnoremap <F4> :GundoToggle<CR>
+
 
 let Tlist_Show_One_File = 1
 let Tlist_GainFocus_On_ToggleOpen = 1

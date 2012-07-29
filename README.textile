@@ -12,6 +12,7 @@ h2. Install vundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 h2. Install ack and ctags
+
 sudo apt-get install ack-grep ctags
 
 h2. Better tags support for ruby

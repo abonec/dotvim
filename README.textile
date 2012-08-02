@@ -1,9 +1,5 @@
 h1. After install
 
-h2. Update submodules
-
-git submodule update --init
-
 h2. On ubuntu
 
 Configure before make:
@@ -11,4 +7,21 @@ Configure before make:
             --enable-perlinterp   --enable-pythoninterp \
             --enable-rubyinterp   --enable-gui=gtk2 \
 
+h2. Install vundle
+
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+h2. Install ack and ctags
+
 sudo apt-get install ack-grep ctags
+
+h2. Better tags support for ruby
+
+gem install rdoc-tags
+rdoc -f tags -a .
+__(-a for all methods includes private)__
+
+h2. Global gitignore (e.g. for tags)
+
+git config --global core.excludesfile ~/.gitignore
+echo "TAGS" >> ~/.gitignore

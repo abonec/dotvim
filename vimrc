@@ -2,16 +2,64 @@
 if has("autocmd")
   autocmd bufwritepost vimrc source $MYVIMRC
 endif
+"Use Vim settings, rather then Vi settings (much better!).
+"This must be first, because it changes other options as a side effect.
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-call pathogen#infect()
-call pathogen#helptags()
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-rvm'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'bbommarito/vim-slim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'itspriddle/vim-jquery'
+Bundle 'greyblake/vim-preview'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/rubycomplete.vim'
+Bundle 'vim-scripts/SuperTab-continued.'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/toggle_words.vim'
+Bundle 'vim-scripts/EvalSelection.vim'
+Bundle 'vim-scripts/ZoomWin'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'kana/vim-textobj-user'
+Bundle 'bootleq/vim-textobj-rubysymbol'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'edsono/vim-matchit'
+Bundle 'wojtekmach/vim-rename'
+Bundle 'lmeijvogel/vim-yaml-helper'
+Bundle 'godlygeek/tabular'
+Bundle 'astashov/vim-ruby-debugger'
+Bundle 'skwp/vim-ruby-conque'
+Bundle 'skwp/vim-rspec'
+Bundle 'rson/vim-conque'
+Bundle 'sjl/gundo.vim'
+Bundle 'austintaylor/vim-open'
+Bundle 'mileszs/ack.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'chrisbra/NrrwRgn'
+Bundle 'skalnik/vim-vroom'
+Bundle 'kien/ctrlp.vim'
+
 syntax on
 filetype plugin indent on
 syntax enable
 
-"Use Vim settings, rather then Vi settings (much better!).
-"This must be first, because it changes other options as a side effect.
-set nocompatible
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 "store lots of :cmdline history

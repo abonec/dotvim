@@ -169,6 +169,11 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 nnoremap <silent> <F9> :TlistToggle<CR>
 
 
+"Syntastic
+let g:syntastic_warning_symbol='#'
+let g:syntastic_quiet_warnings=1
+
+
 nnoremap <silent> <F12> :CoffeeMake<CR>
 
 nnoremap <silent> <Leader>] :tabe ~/.vim/vimrc<CR>

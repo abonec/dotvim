@@ -18,6 +18,8 @@ Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
+"extension for fugitive:
+Bundle 'gregsexton/gitv' 
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-unimpaired'

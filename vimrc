@@ -109,6 +109,9 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 " set statusline=%{ruby_debugger#statusline()}
 
+" column with mark folding
+set foldcolumn=1
+
 set pastetoggle=<F2>
 " copy and paste bind
 nnoremap <C-y> "+y
@@ -117,12 +120,11 @@ nnoremap <C-p> "+gp
 vnoremap <C-p> "+gp
 
 nnoremap gp `[v`]
-" Minibuffexpl
-" map <Leader>b :MiniBufExplorer<cr>
-" let g:miniBufExplMapWindowNavVim = 1
 
 nnoremap <M-i> :tabn<CR>
 nnoremap <M-h> :tabp<CR>
+
+nnoremap <silent> <CR> za
 " Tab Control (others)
 map <A-1> 1gt
 map <A-2> 2gt

@@ -222,6 +222,9 @@ highlight Pmenu ctermbg=238 gui=bold
 
 " abbreviations
 cab help tab help
+cabbrev gitv Gitv
+cabbrev git Git
+
 
 command! Gdt tabedit %|Gdiff
 

@@ -8,6 +8,8 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+set guioptions-=r
+set guioptions-=L
 
 Bundle 'gmarik/vundle'
 
@@ -57,6 +59,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'skalnik/vim-vroom'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Align'
 
 syntax on
 filetype plugin indent on

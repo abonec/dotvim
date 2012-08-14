@@ -58,6 +58,7 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'benmills/vimux'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Align'
+Bundle 'vim-scripts/YankRing.vim'
 
 syntax on
 filetype plugin indent on
@@ -165,6 +166,11 @@ let g:ctrlp_map = ''
 
 " Gundo settings:
 nnoremap <F4> :GundoToggle<CR>
+
+" Yankring settings:
+nnoremap <silent> <F11> :YRShow<CR>
+let g:yankring_replace_n_pkey = '<m-p>'
+let g:yankring_replace_n_nkey = '<m-n>'
 
 
 let Tlist_Show_One_File = 1

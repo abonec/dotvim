@@ -78,11 +78,9 @@ set number      "add line numbers
 
 " When you type the first tab hit will complete as much as possible, the second tab hit will provide a list, the third and subsequent tabs will cycle through completion options so you can complete the file without further keys
 set wildmode=longest,list,full
+" Disable balloons on gui
+set noballooneval
 
-" To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = []
-
-" call add(g:pathogen_disabled, 'vim-commentary')
 
 " tab settings
 set tabstop=2

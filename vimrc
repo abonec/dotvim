@@ -10,22 +10,27 @@ set confirm
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+set guioptions-=r
+set guioptions-=L
 
 Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vividchalk'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'bbommarito/vim-slim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-commentary'
-Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-fugitive'
+"extension for fugitive:
+Bundle 'gregsexton/gitv' 
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'bbommarito/vim-slim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'greyblake/vim-preview'
@@ -34,6 +39,9 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/rubycomplete.vim'
 Bundle 'vim-scripts/SuperTab-continued.'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/toggle_words.vim'
+Bundle 'vim-scripts/EvalSelection.vim'
+Bundle 'vim-scripts/ZoomWin'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'kana/vim-textobj-user'
 Bundle 'bootleq/vim-textobj-rubysymbol'
@@ -42,21 +50,17 @@ Bundle 'edsono/vim-matchit'
 Bundle 'wojtekmach/vim-rename'
 Bundle 'lmeijvogel/vim-yaml-helper'
 Bundle 'godlygeek/tabular'
-Bundle 'vim-scripts/toggle_words.vim'
 Bundle 'astashov/vim-ruby-debugger'
-Bundle 'skwp/vim-ruby-conque'
-Bundle 'skwp/vim-rspec'
-Bundle 'rson/vim-conque'
-Bundle 'vim-scripts/EvalSelection.vim'
-Bundle 'tpope/vim-unimpaired'
 Bundle 'sjl/gundo.vim'
 Bundle 'austintaylor/vim-open'
 Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'chrisbra/NrrwRgn'
-Bundle 'vim-scripts/ZoomWin'
 Bundle 'skalnik/vim-vroom'
+Bundle 'benmills/vimux'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Align'
+Bundle 'vim-scripts/YankRing.vim'
 
 syntax on
 filetype plugin indent on
@@ -77,11 +81,9 @@ set number      "add line numbers
 
 " When you type the first tab hit will complete as much as possible, the second tab hit will provide a list, the third and subsequent tabs will cycle through completion options so you can complete the file without further keys
 set wildmode=longest,list,full
+" Disable balloons on gui
+set noballooneval
 
-" To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = []
-
-" call add(g:pathogen_disabled, 'vim-commentary')
 
 " tab settings
 set tabstop=2
@@ -109,6 +111,9 @@ set statusline+=\ %P    "percent through file
 set laststatus=2
 " set statusline=%{ruby_debugger#statusline()}
 
+" column with mark folding
+set foldcolumn=1
+
 set pastetoggle=<F2>
 " copy and paste bind
 nnoremap <C-y> "+y
@@ -117,12 +122,11 @@ nnoremap <C-p> "+gp
 vnoremap <C-p> "+gp
 
 nnoremap gp `[v`]
-" Minibuffexpl
-" map <Leader>b :MiniBufExplorer<cr>
-" let g:miniBufExplMapWindowNavVim = 1
 
 nnoremap <M-i> :tabn<CR>
 nnoremap <M-h> :tabp<CR>
+
+nnoremap <silent> <CR> za
 " Tab Control (others)
 map <A-1> 1gt
 map <A-2> 2gt
@@ -165,10 +169,20 @@ let g:ctrlp_map = ''
 " Gundo settings:
 nnoremap <F4> :GundoToggle<CR>
 
+" Yankring settings:
+nnoremap <silent> <F11> :YRShow<CR>
+let g:yankring_replace_n_pkey = '<m-p>'
+let g:yankring_replace_n_nkey = '<m-n>'
+
 
 let Tlist_Show_One_File = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 nnoremap <silent> <F9> :TlistToggle<CR>
+
+
+"Syntastic
+let g:syntastic_warning_symbol='#'
+let g:syntastic_quiet_warnings=1
 
 
 nnoremap <silent> <F12> :CoffeeMake<CR>
@@ -215,6 +229,9 @@ highlight Pmenu ctermbg=238 gui=bold
 
 " abbreviations
 cab help tab help
+cabbrev gitv Gitv
+cabbrev git Git
+
 
 command! Gdt tabedit %|Gdiff
 
@@ -234,3 +251,11 @@ vnoremap <CR> <ESC>`<i<SPACE><ESC>`>la<SPACE><ESC>h
 " autocmd CursorMoved * exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
 " map russian's keymap
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+
+" scripts
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>

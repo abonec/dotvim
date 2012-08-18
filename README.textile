@@ -7,9 +7,11 @@ Configure before make:
             --enable-perlinterp   --enable-pythoninterp \
             --enable-rubyinterp   --enable-gui=gtk2 \
 
-h2. Install vundle
+h2. Install plugins
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim -c "BundleInstall"
+and restart vim
 
 h2. Install ack and ctags
 

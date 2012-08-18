@@ -3,41 +3,35 @@ h1. After install
 h2. On ubuntu
 
 Configure before make:
-<pre><code>
-./configure --with-features=huge  --disable-largefile \
+<pre><code>./configure --with-features=huge  --disable-largefile \
             --enable-perlinterp   --enable-pythoninterp \
             --enable-rubyinterp   --enable-gui=gtk2 \
 </code></pre>
 
 h2. Install plugins
 
-<pre><code>
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+<pre><code>git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim -c "BundleInstall"
 </code></pre>
 and restart vim
 
 h2. Install ack and ctags
 
-<pre><code>
-sudo apt-get install ack-grep ctags
+<pre><code>sudo apt-get install ack-grep ctags
 </code></pre>
 
 h2. Better tags support for ruby
 
-<pre><code>
-gem install rdoc-tags
+<pre><code>gem install rdoc-tags
 rdoc -f tags -a .
 </code></pre>
 __(-a for all methods includes private)__
 
 h2. Git config (e.g. for tags)
 
-<pre><code>
-git config --global core.excludesfile ~/.gitignore
+<pre><code>git config --global core.excludesfile ~/.gitignore
 echo "TAGS" >> ~/.gitignore
 </code></pre>
 
-<pre><code>
-git config --global web.browser chromium-browser
+<pre><code>git config --global web.browser chromium-browser
 </code></pre>

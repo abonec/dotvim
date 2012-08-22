@@ -28,7 +28,6 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'bbommarito/vim-slim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'greyblake/vim-preview'
@@ -154,13 +153,13 @@ nmap <Leader><up>    :leftabove  new<CR>
 nmap <Leader><down>  :rightbelow new<CR>
 
 " nnoremap <Leader>d :NERDTree<CR>
-nmap <silent> <Leader>p :NERDTreeToggle<CR>
-nnoremap <Leader>b :CommandTBuffer<CR>
+nmap <silent> <Leader>t :NERDTreeToggle<CR>
+" nnoremap <Leader>b :CommandTBuffer<CR>
 " nnoremap <Leader>r :call RunRspecCurrentFileConque()<CR>
 " nnoremap <Leader>l :call RunRspecCurrentLineConque()<CR>
 
 " CtrlP settings:
-nnoremap <silent> <Leader>t :CtrlP<CR>
+nnoremap <silent> <Leader>p :CtrlP<CR>
 nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = ''
 

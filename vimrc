@@ -59,7 +59,8 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'benmills/vimux'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Align'
-Bundle 'vim-scripts/YankRing.vim'
+" Bundle 'vim-scripts/YankRing.vim'
+Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'elixir-lang/vim-elixir'
 
 syntax on
@@ -170,10 +171,10 @@ let g:ctrlp_map = ''
 nnoremap <F4> :GundoToggle<CR>
 
 " Yankring settings:
-nnoremap <silent> <F11> :YRShow<CR>
-let g:yankring_replace_n_pkey = '<m-p>'
-let g:yankring_replace_n_nkey = '<m-n>'
-
+" nnoremap <silent> <F11> :YRShow<CR>
+" let g:yankring_replace_n_pkey = '<m-p>'
+" let g:yankring_replace_n_nkey = '<m-n>'
+" let g:yankring_zap_keys = 'f F t T / ?'
 
 let Tlist_Show_One_File = 1
 let Tlist_GainFocus_On_ToggleOpen = 1

@@ -32,14 +32,14 @@ Bundle 'bbommarito/vim-slim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'itspriddle/vim-jquery'
-Bundle 'greyblake/vim-preview'
+" Bundle 'greyblake/vim-preview'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/rubycomplete.vim'
 Bundle 'vim-scripts/SuperTab-continued.'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/toggle_words.vim'
-Bundle 'vim-scripts/EvalSelection.vim'
+Bundle 'stjernstrom/vim-ruby-run'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'kana/vim-textobj-user'
@@ -60,6 +60,7 @@ Bundle 'benmills/vimux'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Align'
 Bundle 'vim-scripts/YankRing.vim'
+Bundle 'elixir-lang/vim-elixir'
 
 syntax on
 filetype plugin indent on
@@ -182,6 +183,10 @@ nnoremap <silent> <F9> :TlistToggle<CR>
 "Syntastic
 let g:syntastic_warning_symbol='#'
 let g:syntastic_quiet_warnings=1
+
+" vim-ruby-run
+noremap  <silent> <Leader>e :call RubyRun()<CR>
+vnoremap <silent> <Leader>e :call RubyRangeRun()<CR>
 
 
 nnoremap <silent> <F12> :CoffeeMake<CR>

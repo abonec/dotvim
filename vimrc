@@ -39,6 +39,7 @@ Bundle 'vim-scripts/rubycomplete.vim'
 Bundle 'vim-scripts/SuperTab-continued.'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/toggle_words.vim'
+" may be
 Bundle 'stjernstrom/vim-ruby-run'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'michaeljsmith/vim-indent-object'
@@ -60,7 +61,9 @@ Bundle 'benmills/vimux'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Align'
 " Bundle 'vim-scripts/YankRing.vim'
+" may be
 Bundle 'maxbrunsfeld/vim-yankstack'
+" may be
 Bundle 'elixir-lang/vim-elixir'
 
 syntax on

@@ -82,8 +82,42 @@ set number      "add line numbers
 " When you type the first tab hit will complete as much as possible, the second tab hit will provide a list, the third and subsequent tabs will cycle through completion options so you can complete the file without further keys
 set wildmode=longest,list,full
 " Disable balloons on gui
-set noballooneval
 
+if has("gui_running")
+    "tell the term has 256 colors
+    set t_Co=256
+
+    set guitablabel=%M%t
+    set noballooneval
+
+    if has("gui_gnome")
+        set term=gnome-256color
+        set guifont=Monospace\ Bold\ 12
+    endif
+
+    if has("gui_mac") || has("gui_macvim")
+        set guifont=Menlo:h12
+        set transparency=7
+    endif
+
+    if has("gui_win32") || has("gui_win32s")
+        set guifont=Consolas:h12
+        set enc=utf-8
+    endif
+else
+    "dont load csapprox if there is no gui support - silences an annoying warning
+    let g:CSApprox_loaded = 1
+
+    "set railscasts colorscheme when running vim in gnome terminal
+    if $COLORTERM == 'gnome-terminal'
+        set term=gnome-256color
+    else
+        if $TERM == 'xterm'
+            set term=xterm-256color
+        else
+        endif
+    endif
+endif
 
 " tab settings
 set tabstop=2

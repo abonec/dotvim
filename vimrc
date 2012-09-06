@@ -15,6 +15,7 @@ set guioptions-=L
 
 Bundle 'gmarik/vundle'
 
+Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'tpope/vim-endwise'
@@ -39,7 +40,6 @@ Bundle 'vim-scripts/rubycomplete.vim'
 Bundle 'vim-scripts/SuperTab-continued.'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/toggle_words.vim'
-" may be
 Bundle 'stjernstrom/vim-ruby-run'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'michaeljsmith/vim-indent-object'
@@ -60,10 +60,6 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'benmills/vimux'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Align'
-" Bundle 'vim-scripts/YankRing.vim'
-" may be
-Bundle 'maxbrunsfeld/vim-yankstack'
-" may be
 Bundle 'elixir-lang/vim-elixir'
 
 syntax on

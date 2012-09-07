@@ -12,6 +12,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 set guioptions-=r
 set guioptions-=L
+set directory=~/.vim/swap,.
 
 Bundle 'gmarik/vundle'
 

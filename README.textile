@@ -1,6 +1,7 @@
 h1. After install
 
 h2. On ubuntu
+
 <pre><code>git clone https://github.com/b4winckler/vim.git
 </code></pre>
 

@@ -279,8 +279,10 @@ cab help tab help
 cabbrev gitv Gitv
 cabbrev git Git
 
-
-cnoremap <M-v> <C-r>"
+" Paste in command mode
+" yanked text:
+cnoremap <M-v> <C-r>" 
+" and from clipboard:
 cnoremap <C-v> <C-r>+
 
 command! Gdt tabedit %|Gdiff

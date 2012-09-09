@@ -18,7 +18,6 @@ Bundle 'gmarik/vundle'
 
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-vividchalk'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-surround'
@@ -29,14 +28,9 @@ Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'bbommarito/vim-slim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'itspriddle/vim-jquery'
 " Bundle 'greyblake/vim-preview'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/rubycomplete.vim'
 Bundle 'vim-scripts/SuperTab-continued.'
 Bundle 'vim-scripts/taglist.vim'
@@ -51,7 +45,7 @@ Bundle 'edsono/vim-matchit'
 Bundle 'wojtekmach/vim-rename'
 Bundle 'lmeijvogel/vim-yaml-helper'
 Bundle 'godlygeek/tabular'
-Bundle 'astashov/vim-ruby-debugger'
+" Bundle 'astashov/vim-ruby-debugger'
 Bundle 'sjl/gundo.vim'
 Bundle 'austintaylor/vim-open'
 Bundle 'mileszs/ack.vim'
@@ -61,7 +55,21 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'benmills/vimux'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Align'
+
+" Syntax:
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'pangloss/vim-javascript'
+Bundle 'itspriddle/vim-jquery'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'bbommarito/vim-slim'
+
+" Colorschemes:
+Bundle 'Atom'
+Bundle 'Gravity'
+Bundle 'gregsexton/Muon'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-vividchalk'
 
 syntax on
 filetype plugin indent on
@@ -109,7 +117,6 @@ else
     "dont load csapprox if there is no gui support - silences an annoying warning
     let g:CSApprox_loaded = 1
 
-    "set railscasts colorscheme when running vim in gnome terminal
     if $COLORTERM == 'gnome-terminal'
         set term=gnome-256color
     else

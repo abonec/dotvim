@@ -280,6 +280,9 @@ cabbrev gitv Gitv
 cabbrev git Git
 
 
+cnoremap <M-v> <C-r>"
+cnoremap <C-v> <C-r>+
+
 command! Gdt tabedit %|Gdiff
 
 "Surround selected text by spaces

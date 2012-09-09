@@ -70,6 +70,7 @@ Bundle 'Gravity'
 Bundle 'gregsexton/Muon'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
+Bundle 'croaker/mustang-vim'
 
 syntax on
 filetype plugin indent on

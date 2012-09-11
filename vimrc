@@ -1,7 +1,7 @@
 " Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost vimrc source $MYVIMRC
-endif
+" if has("autocmd")
+"   autocmd bufwritepost vimrc source $MYVIMRC
+" endif
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -13,6 +13,7 @@ call vundle#rc()
 set guioptions-=r
 set guioptions-=L
 set directory=~/.vim/swap,.
+set path=.,,**
 
 Bundle 'gmarik/vundle'
 
@@ -282,6 +283,7 @@ highlight Pmenu ctermbg=238 gui=bold
 cab help tab help
 cabbrev gitv Gitv
 cabbrev git Git
+cabbrev gs Gstatus
 
 " Paste in command mode
 " yanked text:
@@ -290,6 +292,8 @@ cnoremap <M-v> <C-r>"
 cnoremap <C-v> <C-r>+
 
 command! Gdt tabedit %|Gdiff
+command! Vreload source ~/.vimrc
+cabbrev vreload Vreload
 
 "Surround selected text by spaces
 vnoremap <CR> <ESC>`<i<SPACE><ESC>`>la<SPACE><ESC>h

@@ -232,6 +232,11 @@ nnoremap <silent> <F9> :TlistToggle<CR>
 let g:syntastic_warning_symbol='#'
 let g:syntastic_quiet_warnings=1
 
+" Buffergator
+let g:buffergator_autoexpand_on_split=0
+let g:buffergator_suppress_keymaps=1
+noremap  <silent> <Leader>b :BuffergatorToggle<CR>
+
 " vim-ruby-run
 noremap  <silent> <Leader>e :call RubyRun()<CR>
 vnoremap <silent> <Leader>e :call RubyRangeRun()<CR>

@@ -61,7 +61,6 @@ Bundle 'gregsexton/Muon'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'croaker/mustang-vim'
-Bundle 'chriskempson/tomorrow-theme'
 
 " Experimental:
 Bundle 'jeetsukumaran/vim-buffergator'

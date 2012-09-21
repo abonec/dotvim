@@ -53,6 +53,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'bbommarito/vim-slim'
 Bundle 'tpope/vim-haml'
+Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'wlangstroth/vim-haskell'
 
 " Colorschemes:
 Bundle 'Atom'
@@ -64,7 +66,6 @@ Bundle 'croaker/mustang-vim'
 
 " Experimental:
 Bundle 'jeetsukumaran/vim-buffergator'
-" Bundle 'vim-scripts/taglist.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle 'chrisbra/NrrwRgn'
@@ -75,6 +76,11 @@ Bundle 'godlygeek/tabular'
 Bundle 'austintaylor/vim-open'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'lmeijvogel/vim-yaml-helper'
+Bundle 'tpope/vim-markdown'
+" For test:
+" Bundle 'Shougo/vimproc'
+" Bundle 'Shougo/vimshell'
+" Bundle 'Shougo/neocomplcache'
 
 syntax on
 filetype plugin indent on

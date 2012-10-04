@@ -7,8 +7,8 @@ h2. On ubuntu
 
 Configure before make:
 <pre><code>./configure --with-features=huge  --disable-largefile \
-            --enable-perlinterp   --enable-pythoninterp \
-            --enable-rubyinterp   --enable-gui=gtk2
+            --enable-pythoninterp --enable-rubyinterp   \
+            --enable-gui=gtk2
 </code></pre>
 
 h2. Install plugins

@@ -77,6 +77,7 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'lmeijvogel/vim-yaml-helper'
 Bundle 'tpope/vim-markdown'
 Bundle 'koron/nyancat-vim'
+Bundle 'mru.vim'
 " For test:
 " Bundle 'Shougo/vimproc'
 " Bundle 'Shougo/vimshell'

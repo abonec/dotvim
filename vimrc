@@ -51,7 +51,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'bbommarito/vim-slim'
+Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-haml'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'wlangstroth/vim-haskell'
@@ -78,6 +78,7 @@ Bundle 'lmeijvogel/vim-yaml-helper'
 Bundle 'tpope/vim-markdown'
 Bundle 'koron/nyancat-vim'
 Bundle 'mru.vim'
+Bundle 'jnwhiteh/vim-golang'
 " For test:
 " Bundle 'Shougo/vimproc'
 " Bundle 'Shougo/vimshell'
@@ -229,9 +230,7 @@ nnoremap <F4> :GundoToggle<CR>
 " let g:yankring_replace_n_nkey = '<m-n>'
 " let g:yankring_zap_keys = 'f F t T / ?'
 
-let Tlist_Show_One_File = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-nnoremap <silent> <F9> :TlistToggle<CR>
+nnoremap <silent> <F9> :TagbarToggle<CR>
 
 
 "Syntastic
@@ -268,14 +267,14 @@ let g:ruby_debugger_default_script = 'script/rails s'
 let g:ruby_debugger_no_maps = 1
 " let g:ruby_debugger_progname = 'mvim'
 
-map <A-b>  :call g:RubyDebugger.toggle_breakpoint()<CR>
-map <A-v>  :call g:RubyDebugger.open_variables()<CR>
-map <A-m>  :call g:RubyDebugger.open_breakpoints()<CR>
-map <F7>   :call g:RubyDebugger.step()<CR>
-map <F5>   :call g:RubyDebugger.next()<CR>
-map <F8>   :call g:RubyDebugger.continue()<CR>
-map <A-e>  :call g:RubyDebugger.exit()<CR>
-map <A-d>  :call g:RubyDebugger.remove_breakpoints()<CR>
+" map <A-b>  :call g:RubyDebugger.toggle_breakpoint()<CR>
+" map <A-v>  :call g:RubyDebugger.open_variables()<CR>
+" map <A-m>  :call g:RubyDebugger.open_breakpoints()<CR>
+" map <F7>   :call g:RubyDebugger.step()<CR>
+" map <F5>   :call g:RubyDebugger.next()<CR>
+" map <F8>   :call g:RubyDebugger.continue()<CR>
+" map <A-e>  :call g:RubyDebugger.exit()<CR>
+" map <A-d>  :call g:RubyDebugger.remove_breakpoints()<CR>
 
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"

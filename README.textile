@@ -1,6 +1,14 @@
-h1. After install
+h2. Install dependencies
 
-h2. On ubuntu
+<pre><code> sudo apt-get build-dep vim-gnome</code></pre>
+
+h2. Install ack and ctags
+
+<pre><code>sudo apt-get install ack-grep ctags
+</code></pre>
+
+
+h2. Get vim
 
 <pre><code>git clone https://github.com/b4winckler/vim.git
 </code></pre>
@@ -18,10 +26,6 @@ vim -c "BundleInstall"
 </code></pre>
 and restart vim
 
-h2. Install ack and ctags
-
-<pre><code>sudo apt-get install ack-grep ctags
-</code></pre>
 
 h2. Better tags support for ruby
 

@@ -18,6 +18,7 @@ set path=.,,**
 Bundle 'gmarik/vundle'
 
 Bundle 'maxbrunsfeld/vim-yankstack'
+Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rvm'
@@ -40,7 +41,7 @@ Bundle 'bootleq/vim-textobj-rubysymbol'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'edsono/vim-matchit'
 Bundle 'wojtekmach/vim-rename'
-" Bundle 'astashov/vim-ruby-debugger'
+Bundle 'astashov/vim-ruby-debugger'
 Bundle 'sjl/gundo.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
@@ -165,7 +166,17 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 set laststatus=2
 " set statusline=%{ruby_debugger#statusline()}
-
+let g:airline_enable_fugitive=1
+let g:airline_enable_syntastic=1
+let g:airline_enable_bufferline=1
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_linecolumn_prefix = '¶ '
+let g:airline_fugitive_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
+let g:airline_section_c = '%t'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
 " column with mark folding
 set foldcolumn=1
 
@@ -261,20 +272,20 @@ map <A-n> :tn<CR>
 nmap ,t :ToggleWord<CR>
 
 " Vim Ruby Debugger settings
-" let g:ruby_debugger_debug_mode = 1
+let g:ruby_debugger_debug_mode = 1
 let g:ruby_debugger_spec_path = 'rspec'
 let g:ruby_debugger_default_script = 'script/rails s'
 let g:ruby_debugger_no_maps = 1
 " let g:ruby_debugger_progname = 'mvim'
 
-" map <A-b>  :call g:RubyDebugger.toggle_breakpoint()<CR>
-" map <A-v>  :call g:RubyDebugger.open_variables()<CR>
-" map <A-m>  :call g:RubyDebugger.open_breakpoints()<CR>
-" map <F7>   :call g:RubyDebugger.step()<CR>
-" map <F5>   :call g:RubyDebugger.next()<CR>
-" map <F8>   :call g:RubyDebugger.continue()<CR>
-" map <A-e>  :call g:RubyDebugger.exit()<CR>
-" map <A-d>  :call g:RubyDebugger.remove_breakpoints()<CR>
+map <A-b>  :call g:RubyDebugger.toggle_breakpoint()<CR>
+map <A-v>  :call g:RubyDebugger.open_variables()<CR>
+map <A-m>  :call g:RubyDebugger.open_breakpoints()<CR>
+map <F7>   :call g:RubyDebugger.step()<CR>
+map <F5>   :call g:RubyDebugger.next()<CR>
+map <F8>   :call g:RubyDebugger.continue()<CR>
+map <A-e>  :call g:RubyDebugger.exit()<CR>
+map <A-d>  :call g:RubyDebugger.remove_breakpoints()<CR>
 
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"

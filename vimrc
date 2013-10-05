@@ -56,6 +56,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-haml'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'wlangstroth/vim-haskell'
+Bundle 'wting/rust.vim'
 
 " Colorschemes:
 Bundle 'Atom'

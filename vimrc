@@ -80,6 +80,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'koron/nyancat-vim'
 Bundle 'mru.vim'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'EasyGrep'
 " For test:
 " Bundle 'Shougo/vimproc'
 " Bundle 'Shougo/vimshell'
@@ -260,7 +261,8 @@ vnoremap <silent> <Leader>e :call RubyRangeRun()<CR>
 
 nnoremap <silent> <F12> :CoffeeMake<CR>
 
-nnoremap <silent> <Leader>] :tabe ~/.vim/vimrc<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <Leader>[ :lcd %:p:h<CR>
 
 " tags

@@ -247,8 +247,7 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 
 
 "Syntastic
-let g:syntastic_warning_symbol='#'
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_messages={'level': 'warnings'}
 
 " Buffergator
 let g:buffergator_autoexpand_on_split=0

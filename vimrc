@@ -58,7 +58,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'wting/rust.vim'
-Bundly 'wavded/vim-stylus'
+Bundle 'wavded/vim-stylus'
 
 " Colorschemes:
 Bundle 'Atom'
@@ -76,19 +76,9 @@ Bundle 'chrisbra/NrrwRgn'
 Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'tpope/vim-markdown'
-<<<<<<< HEAD
-Bundle 'EasyGrep'
 Bundle 'fatih/vim-go'
 Bundle 'Valloric/YouCompleteMe'
-" For test:
-" Bundle 'Shougo/vimproc'
-" Bundle 'Shougo/vimshell'
-" Bundle 'Shougo/neocomplcache'
-=======
 Bundle 'mru.vim'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'EasyGrep'
->>>>>>> a92da12c6ce4788d7c98199b14ee2c9dc83a295c
 
 syntax on
 filetype plugin indent on

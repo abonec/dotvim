@@ -78,10 +78,9 @@ Bundle 'austintaylor/vim-open'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'lmeijvogel/vim-yaml-helper'
 Bundle 'tpope/vim-markdown'
-Bundle 'koron/nyancat-vim'
-Bundle 'mru.vim'
-Bundle 'jnwhiteh/vim-golang'
 Bundle 'EasyGrep'
+Bundle 'fatih/vim-go'
+Bundle 'Valloric/YouCompleteMe'
 " For test:
 " Bundle 'Shougo/vimproc'
 " Bundle 'Shougo/vimshell'
@@ -90,6 +89,8 @@ Bundle 'EasyGrep'
 syntax on
 filetype plugin indent on
 syntax enable
+set background=dark
+colorschem solarized
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start

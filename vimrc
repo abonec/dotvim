@@ -12,8 +12,11 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 set guioptions-=r
 set guioptions-=L
+set guioptions-=m
+set guioptions-=T
 set directory=~/.vim/swap,.
 set path=.,,**
+set encoding=utf8
 
 Bundle 'gmarik/vundle'
 
@@ -31,17 +34,15 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 " Bundle 'greyblake/vim-preview'
-Bundle 'vim-scripts/rubycomplete.vim'
-Bundle 'vim-scripts/SuperTab-continued.'
+" Bundle 'vim-scripts/rubycomplete.vim'
+" Bundle 'vim-scripts/SuperTab-continued.'
 Bundle 'vim-scripts/toggle_words.vim'
-Bundle 'stjernstrom/vim-ruby-run'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'kana/vim-textobj-user'
 Bundle 'bootleq/vim-textobj-rubysymbol'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'edsono/vim-matchit'
-Bundle 'wojtekmach/vim-rename'
-Bundle 'astashov/vim-ruby-debugger'
+" Bundle 'edsono/vim-matchit'
+" Bundle 'astashov/vim-ruby-debugger'
 Bundle 'sjl/gundo.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
@@ -57,6 +58,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'wting/rust.vim'
+Bundly 'wavded/vim-stylus'
 
 " Colorschemes:
 Bundle 'Atom'
@@ -71,21 +73,12 @@ Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle 'chrisbra/NrrwRgn'
-Bundle 'skalnik/vim-vroom'
-Bundle 'benmills/vimux'
 Bundle 'godlygeek/tabular'
-Bundle 'austintaylor/vim-open'
 Bundle 'vim-scripts/ZoomWin'
-Bundle 'lmeijvogel/vim-yaml-helper'
 Bundle 'tpope/vim-markdown'
-Bundle 'koron/nyancat-vim'
 Bundle 'mru.vim'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'EasyGrep'
-" For test:
-" Bundle 'Shougo/vimproc'
-" Bundle 'Shougo/vimshell'
-" Bundle 'Shougo/neocomplcache'
 
 syntax on
 filetype plugin indent on
@@ -134,7 +127,8 @@ else
     let g:CSApprox_loaded = 1
 
     if $COLORTERM == 'gnome-terminal'
-        set term=gnome-256color
+        set t_Co=256
+        set term=builtin_xterm
     else
         if $TERM == 'xterm'
             set term=xterm-256color
@@ -253,11 +247,6 @@ let g:syntastic_quiet_messages={'level': 'warnings'}
 let g:buffergator_autoexpand_on_split=0
 let g:buffergator_suppress_keymaps=1
 noremap  <silent> <Leader>b :BuffergatorToggle<CR>
-
-" vim-ruby-run
-noremap  <silent> <Leader>e :call RubyRun()<CR>
-vnoremap <silent> <Leader>e :call RubyRangeRun()<CR>
-
 
 nnoremap <silent> <F12> :CoffeeMake<CR>
 

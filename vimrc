@@ -59,6 +59,7 @@ Bundle 'wting/rust.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'tfnico/vim-gradle'
 Bundle 'groovy.vim'
+Bundle 'octol/vim-cpp-enhanced-highlight'
 
 " Colorschemes:
 Bundle 'Atom'
@@ -319,6 +320,10 @@ vnoremap <CR> <ESC>`<i<SPACE><ESC>`>la<SPACE><ESC>h
 " map russian's keymap
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
+" Highlighting of class scope if disabled by default
+let g:cpp_class_scope_highlight = 1
+" Highlighting of template functions is enabled by setting
+let g:cpp_experimental_template_highlight = 1
 
 " scripts
 vnoremap <silent> * :<C-U>

@@ -32,8 +32,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 " Bundle 'greyblake/vim-preview'
-" Bundle 'vim-scripts/rubycomplete.vim'
-" Bundle 'vim-scripts/SuperTab-continued.'
+Bundle 'vim-scripts/rubycomplete.vim'
+Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/toggle_words.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'kana/vim-textobj-user'
@@ -57,6 +57,8 @@ Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'wting/rust.vim'
 Bundle 'wavded/vim-stylus'
+Bundle 'tfnico/vim-gradle'
+Bundle 'groovy.vim'
 
 " Colorschemes:
 Bundle 'Atom'
@@ -75,7 +77,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'tpope/vim-markdown'
 Bundle 'fatih/vim-go'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
+Bundle 'initrc/eclim-vundle'
 Bundle 'mru.vim'
 
 syntax on
@@ -164,6 +167,7 @@ let g:airline_paste_symbol = 'ρ'
 let g:airline_section_c = '%t'
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
+let g:airline#extensions#eclim#enabled = 1
 " column with mark folding
 set foldcolumn=1
 

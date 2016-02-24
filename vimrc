@@ -1,7 +1,5 @@
-" Source the vimrc file after saving it
-" if has("autocmd")
-"   autocmd bufwritepost vimrc source $MYVIMRC
-" endif
+" Solarized scheme for terminal
+" https://github.com/Anthony25/gnome-terminal-colors-solarized
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -34,8 +32,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 " Bundle 'greyblake/vim-preview'
-" Bundle 'vim-scripts/rubycomplete.vim'
-" Bundle 'vim-scripts/SuperTab-continued.'
+Bundle 'vim-scripts/rubycomplete.vim'
+Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/toggle_words.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'kana/vim-textobj-user'
@@ -60,6 +58,9 @@ Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'wting/rust.vim'
 Bundle 'wavded/vim-stylus'
+Bundle 'tfnico/vim-gradle'
+Bundle 'groovy.vim'
+Bundle 'octol/vim-cpp-enhanced-highlight'
 
 " Colorschemes:
 Bundle 'Atom'
@@ -78,7 +79,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'tpope/vim-markdown'
 Bundle 'fatih/vim-go'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
+Bundle 'initrc/eclim-vundle'
 Bundle 'mru.vim'
 
 syntax on
@@ -110,34 +112,25 @@ if has("gui_running")
 
     set guitablabel=%M%t
     set noballooneval
+    set enc=utf-8
 
     if has("gui_gnome")
-        set term=gnome-256color
-        set guifont=Monospace\ Bold\ 12
-    endif
-
-    if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h12
-        set transparency=7
-    endif
-
-    if has("gui_win32") || has("gui_win32s")
-        set guifont=Consolas:h12
-        set enc=utf-8
+      set term=gnome-256color
+      set guifont=Monospace\ Bold\ 12
     endif
 else
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
+  "dont load csapprox if there is no gui support - silences an annoying warning
+  let g:CSApprox_loaded = 1
 
-    if $COLORTERM == 'gnome-terminal'
-        set t_Co=256
-        set term=builtin_xterm
+  if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+    set term=builtin_xterm
+  else
+    if $TERM == 'xterm'
+      set term=xterm-256color
     else
-        if $TERM == 'xterm'
-            set term=xterm-256color
-        else
-        endif
     endif
+  endif
 endif
 
 " tab settings
@@ -176,6 +169,7 @@ let g:airline_paste_symbol = 'ρ'
 let g:airline_section_c = '%t'
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
+let g:airline#extensions#eclim#enabled = 1
 " column with mark folding
 set foldcolumn=1
 
@@ -327,6 +321,10 @@ vnoremap <CR> <ESC>`<i<SPACE><ESC>`>la<SPACE><ESC>h
 " map russian's keymap
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
+" Highlighting of class scope if disabled by default
+let g:cpp_class_scope_highlight = 1
+" Highlighting of template functions is enabled by setting
+let g:cpp_experimental_template_highlight = 1
 
 " scripts
 vnoremap <silent> * :<C-U>

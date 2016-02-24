@@ -46,6 +46,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'sjl/gundo.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
+Plugin 'timonv/vim-cargo'
 
 " Syntax:
 Bundle 'elixir-lang/vim-elixir'

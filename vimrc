@@ -20,6 +20,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rvm'
